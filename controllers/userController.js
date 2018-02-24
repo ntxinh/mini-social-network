@@ -59,12 +59,13 @@ exports.postAuthenticate = async (req, res) => {
 
 exports.postSignUp = async (req, res) => {
   // Get input data
-  let name = req.body.name
+  let firstName = req.body.firstName
+  let lastName = req.body.lastName
   let email = req.body.email
   let password = req.body.password
 
   // Save the user
-  const user = new User({ name, email, password })
+  const user = new User({ firstName, lastName, email, password })
   await user.save()
 
   // Send them an email with the token
