@@ -47,7 +47,11 @@ const userSchema = new Schema({
   },
   resetPasswordToken: String,
   resetPasswordExpires: Date,
-  enable: { type: Boolean, default: false }
+  enable: {
+    type: Boolean,
+    default: false
+  },
+  profile: { type: Schema.Types.ObjectId, ref: 'Profile' }
 }, { timestamps: true })
 
 userSchema.virtual('gravatar').get(() => {
