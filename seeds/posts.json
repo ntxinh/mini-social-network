@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "58c08bbed1d97c276fd56ce1",
+        "content": "This is so funny!",
+        "user": {
+            "_id": "58c039018060197ca0b52d1c"
+        },
+        "likers": [
+            {
+                "_id": "58c039018060197ca0b52d2c"
+            },
+            {
+                "_id": "58c039018060197ca0b52d3c"
+            }
+        ]
+    },
+    {
+        "_id": "58c08bbed1d97c276fd56ce2",
+        "content": "This is so hot!",
+        "user": {
+            "_id": "58c039018060197ca0b52d2c"
+        },
+        "likers": [
+            {
+                "_id": "58c039018060197ca0b52d1c"
+            },
+            {
+                "_id": "58c039018060197ca0b52d3c"
+            }
+        ]
+    }
+]

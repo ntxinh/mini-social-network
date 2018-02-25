@@ -1,0 +1,22 @@
+[
+    {
+        "_id": "41224d776a326fb40f000001",
+        "content": "Great!",
+        "user": {
+            "_id": "58c039018060197ca0b52d2c"
+        },
+        "post": {
+            "_id": "58c08bbed1d97c276fd56ce1"
+        }
+    },
+    {
+        "_id": "41224d776a326fb40f000002",
+        "content": "OMG!",
+        "user": {
+            "_id": "58c039018060197ca0b52d1c"
+        },
+        "post": {
+            "_id": "58c08bbed1d97c276fd56ce2"
+        }
+    }
+]
