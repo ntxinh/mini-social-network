@@ -1,0 +1,47 @@
+[
+    {
+        "_id": "58c039018060197ca0b52d1a",
+        "quote": "Men will be men",
+        "studiedAt": "HUTECH University",
+        "livesIn": "Ho Chi Minh City",
+        "maritalStatus": "Single",
+        "followedBy": 0,
+        "github": "nguyentrucxinh",
+        "linkedIn": "nguyentrucxinh",
+        "twitter": "nguyentrucxinh",
+        "website": "nguyentrucxinh.github.io",
+        "user": {
+            "_id": "58c039018060197ca0b52d1c"
+        }
+    },
+    {
+        "_id": "58c039018060197ca0b52d2a",
+        "quote": "No pain no gain",
+        "studiedAt": "FPT University",
+        "livesIn": "Ha Noi City",
+        "maritalStatus": "Married",
+        "followedBy": 5,
+        "github": "",
+        "linkedIn": "",
+        "twitter": "",
+        "website": "",
+        "user": {
+            "_id": "58c039018060197ca0b52d2c"
+        }
+    },
+    {
+        "_id": "58c039018060197ca0b52d3a",
+        "quote": "The more you learn, the smarter you get",
+        "studiedAt": "FTU University",
+        "livesIn": "NYC",
+        "maritalStatus": "Single",
+        "followedBy": 10,
+        "github": "",
+        "linkedIn": "",
+        "twitter": "",
+        "website": "",
+        "user": {
+            "_id": "58c039018060197ca0b52d3c"
+        }
+    }
+]
