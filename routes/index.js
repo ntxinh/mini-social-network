@@ -14,7 +14,7 @@ router.get('/api/confirm-sign-up', catchErrors(userController.getConfirmSignUp))
 router.post('/api/forgot-password', catchErrors(userController.postForgotPassword))
 router.get('/api/confirm-reset-password', catchErrors(userController.getConfirmResetPassword))
 
-router.get('/api/get-user-profile/:userId', catchErrors(userEndpoint.getUserProfile))
+router.get('/api/get-user-profile/:userId', catchErrors(userEndpoint.findUserProfile))
 
 // Middlewares
 router.use(getAuthorize)

@@ -2,14 +2,14 @@ const mongoose = require('mongoose')
 
 const User = mongoose.model('User')
 
-exports.getUserProfile = async (userId) => {
+exports.findUserProfile = async (userId) => {
   const user = await User
     .findById(userId)
     .populate('profile')
     .populate('posts')
     .populate({
       path: 'friends',
-      match: {status: 'ACCEPTED'}
+      match: { status: 'ACCEPTED' }
     })
     .exec((err, user) => {
       if (err) {
