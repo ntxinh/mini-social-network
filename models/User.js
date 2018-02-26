@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 mongoose.Promise = global.Promise
-const md5 = require('md5')
 const validator = require('validator')
 const bcrypt = require('bcrypt')
 
@@ -51,13 +50,9 @@ const userSchema = new Schema({
     type: Boolean,
     default: false
   }
-}, { timestamps: true })
+}, { timestamps: true, toJSON: { virtuals: true } })
 
-userSchema.virtual('gravatar').get(() => {
-  const hash = md5(this.email)
-  return `https://gravatar.com/avatar/${hash}?s=200`
-})
-
+// Populate Virtuals
 userSchema.virtual('profile', {
   ref: 'Profile',
   localField: '_id',
@@ -69,6 +64,13 @@ userSchema.virtual('posts', {
   ref: 'Post',
   localField: '_id',
   foreignField: 'user',
+  justOne: false
+})
+
+userSchema.virtual('friends', {
+  ref: 'Friend',
+  localField: '_id',
+  foreignField: 'user_action_id',
   justOne: false
 })
 

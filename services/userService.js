@@ -7,6 +7,10 @@ exports.getUserProfile = async (userId) => {
     .findById(userId)
     .populate('profile')
     .populate('posts')
+    .populate({
+      path: 'friends',
+      match: {status: 'ACCEPTED'}
+    })
     .exec((err, user) => {
       if (err) {
         throw new Error(err)
