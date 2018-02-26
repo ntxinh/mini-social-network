@@ -50,13 +50,26 @@ const userSchema = new Schema({
   enable: {
     type: Boolean,
     default: false
-  },
-  profile: { type: Schema.Types.ObjectId, ref: 'Profile' }
+  }
 }, { timestamps: true })
 
 userSchema.virtual('gravatar').get(() => {
   const hash = md5(this.email)
   return `https://gravatar.com/avatar/${hash}?s=200`
+})
+
+userSchema.virtual('profile', {
+  ref: 'Profile',
+  localField: '_id',
+  foreignField: 'user',
+  justOne: true
+})
+
+userSchema.virtual('posts', {
+  ref: 'Post',
+  localField: '_id',
+  foreignField: 'user',
+  justOne: false
 })
 
 userSchema.pre('save', async function (next) {
