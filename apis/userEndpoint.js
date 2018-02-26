@@ -2,10 +2,10 @@ const { SuccessResponse, FailResponse } = require('../helpers/responseHelpers')
 
 const { getUserProfile } = require('../services/userService')
 
-exports.getUserProfile = (req, res) => {
-  const user = getUserProfile(req.params.userId)
+exports.getUserProfile = async (req, res) => {
+  const user = await getUserProfile(req.params.userId)
 
-  if (user) {
+  if (!user) {
     return res.json(
       new FailResponse.Builder()
         .build()
