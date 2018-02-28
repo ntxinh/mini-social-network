@@ -1,9 +1,9 @@
 const { SuccessResponse, FailResponse } = require('../helpers/responseHelpers')
 
-const { findUserProfile } = require('../services/users/findUserProfile')
+const services = require('../services')
 
 exports.findUserProfile = async (req, res) => {
-  const user = await findUserProfile(req.params.userId)
+  const user = await services.users.findUserProfile(req.params.userId)
 
   if (!user) {
     return res.json(
