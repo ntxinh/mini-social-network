@@ -5,6 +5,7 @@ const { catchErrors } = require('../helpers/errorHandlers')
 const { getAuthorize } = require('../middlewares/authMiddleware')
 const userController = require('../controllers/userController')
 const userEndpoint = require('../apis/userEndpoint')
+const friendEndpoint = require('../apis/friendEndpoint')
 
 // Unprotected routes
 router.get('/', (req, res) => res.json({ msg: process.env.APP_NAME }))
@@ -15,6 +16,7 @@ router.post('/api/forgot-password', catchErrors(userController.postForgotPasswor
 router.get('/api/confirm-reset-password', catchErrors(userController.getConfirmResetPassword))
 
 router.get('/api/get-user-profile/:userId', catchErrors(userEndpoint.findUserProfile))
+router.get('/api/add-friend/:userTwoId', catchErrors(friendEndpoint.addFriend))
 
 // Middlewares
 router.use(getAuthorize)

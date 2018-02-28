@@ -1,16 +1,16 @@
 [
     {
         "_id": "58c03ada8060197ca0b52d51",
-        "user_one_id": "58c039018060197ca0b52d1c",
-        "user_two_id": "58c039018060197ca0b52d2c",
-        "user_action_id": "58c039018060197ca0b52d1c",
+        "userOneId": "58c039018060197ca0b52d1c",
+        "userTwoId": "58c039018060197ca0b52d2c",
+        "userActionId": "58c039018060197ca0b52d1c",
         "status": "ACCEPTED"
     },
     {
         "_id": "58c03ada8060197ca0b52d52",
-        "user_one_id": "58c039018060197ca0b52d1c",
-        "user_two_id": "58c039018060197ca0b52d3c",
-        "user_action_id": "58c039018060197ca0b52d1c",
+        "userOneId": "58c039018060197ca0b52d1c",
+        "userTwoId": "58c039018060197ca0b52d3c",
+        "userActionId": "58c039018060197ca0b52d1c",
         "status": "ACCEPTED"
     }
 ]

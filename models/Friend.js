@@ -3,9 +3,9 @@ const Schema = mongoose.Schema
 mongoose.Promise = global.Promise
 
 const friendSchema = new Schema({
-  user_one_id: { type: Schema.Types.ObjectId, ref: 'User' },
-  user_two_id: { type: Schema.Types.ObjectId, ref: 'User' },
-  user_action_id: { type: Schema.Types.ObjectId, ref: 'User' },
+  userOneId: { type: Schema.Types.ObjectId, ref: 'User' },
+  userTwoId: { type: Schema.Types.ObjectId, ref: 'User' },
+  userActionId: { type: Schema.Types.ObjectId, ref: 'User' },
   status: {
     type: String,
     trim: true,
