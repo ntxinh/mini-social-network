@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const fs = require('fs')
+const path = require('path')
 
 // Import environmental variables from our variables.env file
 require('dotenv').config({ path: 'variables.env' })
@@ -13,11 +15,10 @@ mongoose.connection.on('error', (err) => {
 // READY?! Let's go!
 
 // Import all of our models
-require('./models/User')
-require('./models/Profile')
-require('./models/Friend')
-require('./models/Post')
-require('./models/Comment')
+const modelsPath = path.join(__dirname, 'models')
+fs.readdirSync(modelsPath).forEach(function (file) {
+  require(path.join(modelsPath, file))
+})
 
 // Start our app!
 const app = require('./app')
