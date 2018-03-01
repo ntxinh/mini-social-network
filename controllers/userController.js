@@ -210,3 +210,30 @@ exports.getConfirmResetPassword = async (req, res) => {
       .build()
   )
 }
+
+exports.getUserCurrent = async (req, res) => {
+  const token = (req.headers.authorization).replace(process.env.JWT_TOKEN_TYPE, '').trim()
+  // Decode token
+  try {
+    let decoded = await jwt.verify(token, process.env.JWT_SECRET)
+    let email = decoded.email
+
+    // Find user
+    let user = await User.findOne({ email })
+
+    // Create response
+    return res.json(
+      new SuccessResponse.Builder()
+        .withContent(user)
+        .build()
+    )
+  } catch (err) {
+    logger.error(`Token Decode Error ${err}`)
+    return res.json(
+      new FailResponse.Builder()
+        .withContent(err)
+        .withMessage('Token Decode Error')
+        .build()
+    )
+  }
+}
