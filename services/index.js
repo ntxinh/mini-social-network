@@ -10,6 +10,9 @@ const { findUserByEmail } = require('./users/findUserByEmail')
 
 const { findUserProfile } = require('./users/findUserProfile')
 const { addFriend } = require('./friends/addFriend')
+const { addPost } = require('./posts/addPost')
+const { likePost } = require('./posts/likePost')
+const { addComment } = require('./comments/addComment')
 
 const services = {
   users: {
@@ -26,6 +29,13 @@ const services = {
   },
   friends: {
     addFriend
+  },
+  posts: {
+    addPost,
+    likePost
+  },
+  comments: {
+    addComment
   }
 }
 
