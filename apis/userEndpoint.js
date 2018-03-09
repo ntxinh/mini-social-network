@@ -92,7 +92,7 @@ exports.getConfirmResetPassword = async (req, res) => {
 
 exports.getUserCurrent = async (req, res) => {
   // Get token from request
-  const token = (req.headers.authorization).replace(process.env.JWT_TOKEN_TYPE, '').trim()
+  const token = req.decoded.payload.email
 
   const user = await services.users.findUserCurrent(token)
 
