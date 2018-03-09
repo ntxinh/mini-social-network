@@ -3,17 +3,16 @@ const router = express.Router()
 
 const { catchErrors } = require('../helpers/errorHandlers')
 const { getAuthorize } = require('../middlewares/authMiddleware')
-const userController = require('../controllers/userController')
 const userEndpoint = require('../apis/userEndpoint')
 const friendEndpoint = require('../apis/friendEndpoint')
 
 // Unprotected routes
 router.get('/', (req, res) => res.json({ msg: process.env.APP_NAME }))
-router.post('/api/authenticate', catchErrors(userController.postAuthenticate))
-router.post('/api/sign-up', catchErrors(userController.postSignUp))
-router.get('/api/confirm-sign-up', catchErrors(userController.getConfirmSignUp))
-router.post('/api/forgot-password', catchErrors(userController.postForgotPassword))
-router.get('/api/confirm-reset-password', catchErrors(userController.getConfirmResetPassword))
+router.post('/api/authenticate', catchErrors(userEndpoint.postAuthenticate))
+router.post('/api/sign-up', catchErrors(userEndpoint.postSignUp))
+router.get('/api/confirm-sign-up', catchErrors(userEndpoint.getConfirmSignUp))
+router.post('/api/forgot-password', catchErrors(userEndpoint.postForgotPassword))
+router.get('/api/confirm-reset-password', catchErrors(userEndpoint.getConfirmResetPassword))
 
 router.get('/api/get-user-profile/:userId', catchErrors(userEndpoint.findUserProfile))
 router.get('/api/add-friend/:userTwoId', catchErrors(friendEndpoint.addFriend))
@@ -22,8 +21,8 @@ router.get('/api/add-friend/:userTwoId', catchErrors(friendEndpoint.addFriend))
 router.use(getAuthorize)
 
 // Protected routes
-router.get('/api/users', catchErrors(userController.getUsers))
-router.get('/api/test-axios', catchErrors(userController.getTestAxios))
-router.get('/api/get-user-current', catchErrors(userController.getUserCurrent))
+router.get('/api/users', catchErrors(userEndpoint.getUsers))
+router.get('/api/get-user-current', catchErrors(userEndpoint.getUserCurrent))
+router.get('/api/test-axios', catchErrors(userEndpoint.getTestAxios))
 
 module.exports = router
