@@ -3,7 +3,7 @@ const { SuccessResponse, FailResponse } = require('../helpers/responseHelpers')
 const services = require('../services')
 
 exports.addFriend = async (req, res) => {
-  const friend = await services.friends.addFriend(req.params.userTwoId)
+  const friend = await services.friends.addFriend(req.params.userTwoId, req.userCurrent)
 
   if (!friend) {
     return res.json(
