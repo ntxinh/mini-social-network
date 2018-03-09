@@ -6,6 +6,7 @@ const { findUsers } = require('./users/findUsers')
 const { forgotPassword } = require('./users/forgotPassword')
 const { signUp } = require('./users/signUp')
 const { testAxios } = require('./users/testAxios')
+const { findUserByEmail } = require('./users/findUserByEmail')
 
 const { findUserProfile } = require('./users/findUserProfile')
 const { addFriend } = require('./users/addFriend')
@@ -20,6 +21,7 @@ const services = {
     forgotPassword,
     signUp,
     testAxios,
+    findUserByEmail,
     findUserProfile
   },
   friends: {

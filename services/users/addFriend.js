@@ -4,7 +4,6 @@ const Friend = mongoose.model('Friend')
 const User = mongoose.model('User')
 
 exports.addFriend = async (userTwoId) => {
-
   const userTwo = await User.findById(userTwoId)
 
   const friend = new Friend({
