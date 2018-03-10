@@ -24,10 +24,11 @@ router.get('/api/users', catchErrors(userEndpoint.getUsers))
 router.get('/api/get-user-current', catchErrors(userEndpoint.getUserCurrent))
 router.get('/api/test-axios', catchErrors(userEndpoint.getTestAxios))
 
-router.get('/api/get-user-profile', catchErrors(userEndpoint.findUserProfile))
+router.get('/api/get-user-profile', catchErrors(userEndpoint.getUserProfile))
 router.post('/api/add-friend', catchErrors(friendEndpoint.addFriend))
 router.post('/api/add-post', catchErrors(postEndpoint.addPost))
 router.put('/api/like-post', catchErrors(postEndpoint.likePost))
 router.post('/api/add-comment', catchErrors(commentEndpoint.addComment))
+router.get('/api/get-posts', catchErrors(postEndpoint.getPosts))
 
 module.exports = router

@@ -36,3 +36,20 @@ exports.likePost = async (req, res) => {
       .build()
   )
 }
+
+exports.getPosts = async (req, res) => {
+  const posts = await services.posts.findPosts(req.userCurrent)
+
+  if (!posts) {
+    return res.json(
+      new FailResponse.Builder()
+        .build()
+    )
+  }
+
+  return res.json(
+    new SuccessResponse.Builder()
+      .withContent(posts)
+      .build()
+  )
+}

@@ -98,7 +98,7 @@ exports.getUserCurrent = async (req, res) => {
   )
 }
 
-exports.findUserProfile = async (req, res) => {
+exports.getUserProfile = async (req, res) => {
   const user = await services.users.findUserProfile(req.userCurrent._id)
 
   if (!user) {

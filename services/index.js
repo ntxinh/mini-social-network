@@ -12,6 +12,7 @@ const { findUserProfile } = require('./users/findUserProfile')
 const { addFriend } = require('./friends/addFriend')
 const { addPost } = require('./posts/addPost')
 const { likePost } = require('./posts/likePost')
+const { findPosts } = require('./posts/findPosts')
 const { addComment } = require('./comments/addComment')
 
 const services = {
@@ -32,7 +33,8 @@ const services = {
   },
   posts: {
     addPost,
-    likePost
+    likePost,
+    findPosts
   },
   comments: {
     addComment
