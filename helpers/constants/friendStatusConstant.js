@@ -1,0 +1,4 @@
+exports.PENDING = 'PENDING'
+exports.ACCEPTED = 'ACCEPTED'
+exports.DECLINED = 'DECLINED'
+exports.BLOCKED = 'BLOCKED'
