@@ -70,7 +70,7 @@ userSchema.virtual('posts', {
 userSchema.virtual('friends', {
   ref: 'Friend',
   localField: '_id',
-  foreignField: 'user_action_id',
+  foreignField: 'userActionId',
   justOne: false
 })
 
