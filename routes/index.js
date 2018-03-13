@@ -16,6 +16,8 @@ router.get('/api/confirm-sign-up', catchErrors(userEndpoint.getConfirmSignUp))
 router.post('/api/forgot-password', catchErrors(userEndpoint.postForgotPassword))
 router.get('/api/confirm-reset-password', catchErrors(userEndpoint.getConfirmResetPassword))
 
+router.get('/api/get-user-profile-by-username/:username', catchErrors(userEndpoint.getUserProfileByUsername))
+
 // Middlewares
 router.use(getAuthorize)
 

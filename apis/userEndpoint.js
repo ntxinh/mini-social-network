@@ -114,3 +114,20 @@ exports.getUserProfile = async (req, res) => {
       .build()
   )
 }
+
+exports.getUserProfileByUsername = async (req, res) => {
+  const user = await services.users.findUserProfileByUsername(req.params.username)
+
+  if (!user) {
+    return res.json(
+      new FailResponse.Builder()
+        .build()
+    )
+  }
+
+  return res.json(
+    new SuccessResponse.Builder()
+      .withContent(user)
+      .build()
+  )
+}
