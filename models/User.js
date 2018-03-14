@@ -44,6 +44,10 @@ const userSchema = new Schema({
     trim: true,
     required: 'Please supply an avatar'
   },
+  jobTitle: {
+    type: String,
+    trim: true
+  },
   resetPasswordToken: String,
   resetPasswordExpires: Date,
   enable: {
