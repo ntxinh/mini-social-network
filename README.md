@@ -4,9 +4,9 @@
 
 # STACK
 
-- Node.js / Express.js
-- MongoDB / Mongoose
-- JWT
+- [Node.js](https://nodejs.org/) / [Express.js](http://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/) / [Mongoose](http://mongoosejs.com/)
+- [JWT](https://jwt.io/)
 - [JavaScript Standard Style Guide](https://standardjs.com/)
 
 ---
