@@ -8,6 +8,7 @@
 - [MongoDB](https://www.mongodb.com/) / [Mongoose](http://mongoosejs.com/)
 - [JWT](https://jwt.io/)
 - [JavaScript Standard Style Guide](https://standardjs.com/)
+- [Heroku](https://www.heroku.com/)
 
 ---
 # HOW TO RUN
